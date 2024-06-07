@@ -6,17 +6,50 @@
 //
 
 import SwiftUI
+import RealityKit
 
 struct ContentView: View {
+    @State private var image: Image?
+    @State private var showingImagePicker = false
+    @State private var inputImage: UIImage?
+    
     var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundStyle(.tint)
-            Text("Hello, world!")
+        ZStack {
+            ARViewContainer().edgesIgnoringSafeArea(.all)
+            
+            image?
+                .resizable()
+                .opacity(0.5)
+            
+            Button("", systemImage: "camera.fill") {
+                showingImagePicker.toggle()
+            }.position(x: 30, y: 30)
         }
-        .padding()
+        .onChange(of: showingImagePicker) { _ in loadImage() }
+        .sheet(isPresented: $showingImagePicker) {
+            ImagePicker(image: $inputImage)
+        }
     }
+    
+    func loadImage() {
+        guard let inputImage = inputImage else { return }
+        image = Image(uiImage: inputImage)
+    }
+}
+
+struct ARViewContainer: UIViewRepresentable {
+    
+    
+    func makeUIView(context: Context) -> ARView {
+        
+        let arView = ARView(frame: .zero)
+        
+        return arView
+        
+    }
+    
+    func updateUIView(_ uiView: ARView, context: Context) {}
+    
 }
 
 #Preview {
