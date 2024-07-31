@@ -11,6 +11,8 @@
 		7E6E75E32C12044500C3E56E /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E6E75E22C12044500C3E56E /* ContentView.swift */; };
 		7E6E75E52C12044600C3E56E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7E6E75E42C12044600C3E56E /* Assets.xcassets */; };
 		7E6E75E82C12044600C3E56E /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7E6E75E72C12044600C3E56E /* Preview Assets.xcassets */; };
+		7E70AB162C24A70C002C8E19 /* DrawingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E70AB152C24A70C002C8E19 /* DrawingView.swift */; };
+		7E8DE56A2C3B6A1F008737B6 /* CameraPreview.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E8DE5692C3B6A1F008737B6 /* CameraPreview.swift */; };
 		7EE4A00F2C12893600767EE7 /* ImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EE4A00E2C12893600767EE7 /* ImagePicker.swift */; };
 /* End PBXBuildFile section */
 
@@ -21,6 +23,8 @@
 		7E6E75E22C12044500C3E56E /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		7E6E75E42C12044600C3E56E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		7E6E75E72C12044600C3E56E /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		7E70AB152C24A70C002C8E19 /* DrawingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrawingView.swift; sourceTree = "<group>"; };
+		7E8DE5692C3B6A1F008737B6 /* CameraPreview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraPreview.swift; sourceTree = "<group>"; };
 		7EE4A00E2C12893600767EE7 /* ImagePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePicker.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -57,7 +61,9 @@
 				7E45F3D62C1291A80086FDD1 /* Info.plist */,
 				7E6E75E02C12044500C3E56E /* CamDrawApp.swift */,
 				7E6E75E22C12044500C3E56E /* ContentView.swift */,
+				7E70AB152C24A70C002C8E19 /* DrawingView.swift */,
 				7EE4A00E2C12893600767EE7 /* ImagePicker.swift */,
+				7E8DE5692C3B6A1F008737B6 /* CameraPreview.swift */,
 				7E6E75E42C12044600C3E56E /* Assets.xcassets */,
 				7E6E75E62C12044600C3E56E /* Preview Content */,
 			);
@@ -142,9 +148,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7E8DE56A2C3B6A1F008737B6 /* CameraPreview.swift in Sources */,
 				7EE4A00F2C12893600767EE7 /* ImagePicker.swift in Sources */,
 				7E6E75E32C12044500C3E56E /* ContentView.swift in Sources */,
 				7E6E75E12C12044500C3E56E /* CamDrawApp.swift in Sources */,
+				7E70AB162C24A70C002C8E19 /* DrawingView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -276,7 +284,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 5;
 				DEVELOPMENT_ASSET_PATHS = "\"CamDraw/Preview Content\"";
 				DEVELOPMENT_TEAM = VP5MJD3LR4;
 				ENABLE_PREVIEWS = YES;
@@ -284,7 +292,9 @@
 				INFOPLIST_FILE = CamDraw/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = "Cam Draw";
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.entertainment";
-				INFOPLIST_KEY_NSCameraUsageDescription = "Necesitamos usar tu camara";
+				INFOPLIST_KEY_NSCameraUsageDescription = "Necesitamos usar tu camara para poder guiarte en el trazado de tu dibujo";
+				INFOPLIST_KEY_NSMicrophoneUsageDescription = "Necesitamos el micrófono para la toma de video";
+				INFOPLIST_KEY_NSPhotoLibraryAddUsageDescription = "Neceasitamos guardar los vídeos en tu biblioteca";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -296,7 +306,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0;
+				MARKETING_VERSION = 1.1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = yaelzamora.CamDraw;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -311,7 +321,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 5;
 				DEVELOPMENT_ASSET_PATHS = "\"CamDraw/Preview Content\"";
 				DEVELOPMENT_TEAM = VP5MJD3LR4;
 				ENABLE_PREVIEWS = YES;
@@ -319,7 +329,9 @@
 				INFOPLIST_FILE = CamDraw/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = "Cam Draw";
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.entertainment";
-				INFOPLIST_KEY_NSCameraUsageDescription = "Necesitamos usar tu camara";
+				INFOPLIST_KEY_NSCameraUsageDescription = "Necesitamos usar tu camara para poder guiarte en el trazado de tu dibujo";
+				INFOPLIST_KEY_NSMicrophoneUsageDescription = "Necesitamos el micrófono para la toma de video";
+				INFOPLIST_KEY_NSPhotoLibraryAddUsageDescription = "Neceasitamos guardar los vídeos en tu biblioteca";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -331,7 +343,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0;
+				MARKETING_VERSION = 1.1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = yaelzamora.CamDraw;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
